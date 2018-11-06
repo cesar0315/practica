@@ -1,13 +1,13 @@
 firebase.initializeApp({
-  apiKey: "AIzaSyAauqhEs90SrSj0iYYlefjgNVw7YySpnE4",
-    authDomain: "practica-b2c8f.firebaseapp.com",
-    databaseURL: "https://practica-b2c8f.firebaseio.com",
-    projectId: "practica-b2c8f",
-    storageBucket: "practica-b2c8f.appspot.com",
-    messagingSenderId: "1013247874085"
+  apiKey: "AIzaSyDMdWcTPaQ4eA3GIDEsCD_zY7H4BL51t_k",
+    authDomain: "practica-e521c.firebaseapp.com",
+    databaseURL: "https://practica-e521c.firebaseio.com",
+    projectId: "practica-e521c",
+    storageBucket: "practica-e521c.appspot.com",
+    messagingSenderId: "330985846692"
 });
 
-// Initialize Cloud Firestore through Firebase
+
 var db = firebase.firestore();
 
 function guardar() {
@@ -33,7 +33,7 @@ function guardar() {
   
 }
 
-//Listar datos
+
 var tabla = document.getElementById('tabla');
 
 db.collection("practica").onSnapshot((querySnapshot) => {
@@ -53,7 +53,7 @@ db.collection("practica").onSnapshot((querySnapshot) => {
         ` 
     });
 });
-//Editrar datos 
+ 
 function editar(id, nombre, descripcion, precio) {    
 
     document.getElementById("nombre").value = nombre;
@@ -92,7 +92,7 @@ function editar(id, nombre, descripcion, precio) {
     }
 }
 
-//borrar datos
+
 function eliminar(id) {
 
     db.collection("practica").doc(id).delete().then(function () {
